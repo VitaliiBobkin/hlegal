@@ -1,0 +1,77 @@
+@use "vars" as v;
+
+.partners {
+  background-color: v.$basic-white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @media screen and (min-width: v.$breakpoint-xxl) {
+      max-width: 1720px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    color: v.$regular-color;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 720px;
+    overflow: auto;
+    padding: 0;
+
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xxl) {
+      width: 1720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__list-item {
+    box-sizing: border-box;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      height: auto;
+      flex: 1 1 33.333%;
+    }
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex: 1 1 25%;
+    }
+  }
+
+  &__list-item-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

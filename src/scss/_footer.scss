@@ -1,0 +1,175 @@
+@use "vars" as v;
+
+.footer {
+  background-color: v.$bg-color;
+
+  &__container {
+    @media screen and (min-width: v.$breakpoint-md) {
+        background-color: v.$bg-color; 
+        padding: 30px 30px;
+      }
+  }
+
+  &__dotted {
+    display: none;
+    background-color: v.$text-color;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin: 0 8px;
+      align-self: center;
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex-direction: column;
+      align-items: stretch;
+      text-align: left;
+    }
+  }
+
+  &__box-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+        flex-direction: row;            
+        justify-content: flex-start;    
+        align-items: center;
+      }
+    
+      @media screen and (min-width: v.$breakpoint-lg) {
+        justify-content: space-between;
+      }
+  }
+
+  &__box-company {
+    font-size: 16px;
+    order: 1;
+    
+    @media screen and (min-width: v.$breakpoint-md) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;  // Вирівнюємо вліво
+        text-align: left;
+        padding-bottom: 0;
+    }
+  }
+
+  &__box-address {
+     padding-bottom: 10px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      padding-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  &__address-map {
+    display: flex;
+    justify-content: center;
+  
+    a {
+      text-transform: uppercase;
+      font-weight: 700;
+      display: inline-block;
+      color: v.$regular-color;
+      text-decoration: none;
+      text-align: center; 
+    }
+  }
+  
+  &__box-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    order: 2;
+    color: v.$regular-color;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+        flex-direction: row;
+        justify-content: start;
+        order: 2;
+    }
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      flex-direction: row;
+      justify-content: start;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$regular-color;
+  }
+
+  &__social-icon {
+    width: 36px;
+    height: 36px;
+    fill: v.$regular-color;
+  }
+
+  &__social-phone {
+    font-weight: 400;
+    font-size: 18px;
+
+    a {
+      color: v.$alt-color;
+      text-decoration: none;
+    }
+  }
+
+  &__social-email {
+    font-weight: 700;
+    font-size: 18px;
+    color: v.$regular-color;
+
+    a {
+      color: v.$regular-color;
+    }
+  }
+  
+  &__copyright {
+    
+    order: 3;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-self: flex-end;
+        
+    }
+
+    @media screen and (min-width: v.$breakpoint-md) {
+        align-self: flex-center;
+        text-align: center;
+        order: 3;
+    }
+  }
+
+  &__copyright-link {
+    font-size: 14px;
+    color: v.$text-color;
+    text-decoration: none;
+    @media screen and (min-width: v.$breakpoint-lg) {
+        font-size: 16px;
+    }
+  }
+}

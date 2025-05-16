@@ -1,0 +1,91 @@
+@use "vars" as v;
+
+.tabs {
+  overflow: hidden;
+  padding: 30px 0;
+  @media screen and (min-width: v.$breakpoint-md) {
+    padding: 60px 0;
+  }
+
+  &__container {
+    @media screen and (min-width: v.$breakpoint-lg) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 30px;
+    overflow: auto;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    margin-right: -30px;
+
+    @media screen and (min-width: v.$breakpoint-md) {
+      margin-right: calc(-50vw + 324px);
+    }
+    @media screen and (min-width: v.$breakpoint-lg) {
+      margin: 0;
+      padding: 0;
+      overflow: visible;
+      flex-flow: column;
+      border-right: 4px solid v.$text-color;
+      padding-right: 60px;
+      align-items: flex-end;
+    }
+
+    @media screen and (min-width: v.$breakpoint-xl) {
+      flex: 1 1 35%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__links-item {
+    white-space: nowrap;
+    cursor: pointer;
+    @include v.title;
+
+    &.active {
+      @include v.text-gradient(v.$gradient-red-reversed);
+    }
+  }
+
+  &__contents {
+    padding-top: 30px;
+    border-top: 4px solid v.$text-color;
+    color: v.$basic-white;
+
+    @media screen and (min-width: v.$breakpoint-lg) {
+      border: 0;
+      padding-left: 60px;
+      padding-top: 0;
+    }
+    @media screen and (min-width: v.$breakpoint-xl) {
+      flex: 1 1 65%;
+    }
+  }
+
+  &__contents-item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__contents-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    @media screen and (min-width: v.$breakpoint-md) {
+      font-size: 30px;
+    }
+  }
+
+  &__contents-desc {
+    font-size: 19px;
+  }
+}
