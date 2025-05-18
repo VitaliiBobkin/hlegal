@@ -154,6 +154,7 @@
     display: flex;
     width: 24px;
     height: 24px;
+    fill: v.$accent-color;
   
     @media screen and (min-width: v.$breakpoint-md) {
       display: none;
