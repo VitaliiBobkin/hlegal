@@ -34,6 +34,25 @@
     }
   }
 
+	&__arrow {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+	}
+
+	&__link {
+      font-weight: 400;
+      font-size: 14px;
+      color: v.$regular-color;
+      line-height: 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding-bottom: 5px;
+	}
+
   &__inner {
     padding: 30px;
     background: v.$bg-color;
@@ -72,12 +91,16 @@
     }
   }
 }
+.arrow {
+  border: solid v.$regular-color;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  width: 6px;
+  height: 6px;
+}
 
-.swiper {
+.right {
+  transform: rotate(-45deg);
 }
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
-}
+

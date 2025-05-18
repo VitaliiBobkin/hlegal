@@ -223,6 +223,7 @@
     border-top-left-radius: v.$radius-md;
     padding: 12px;
     transition: bottom 0.2s linear;
+    z-index: 10;
 
     &.active {
       bottom: 0;
@@ -298,6 +299,14 @@
     text-align: center;
     padding: 8px;
     border-radius: v.$radius-md;
+
+    &:hover {
+      color: v.$hover-coolor;
+    }
+
+    &.active {
+      color: v.$accent-color;
+    }
 
     @media screen and (min-width: v.$breakpoint-md) {
       color: v.$basic-white;

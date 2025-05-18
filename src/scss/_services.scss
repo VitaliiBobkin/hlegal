@@ -11,26 +11,26 @@
         
         &::before,
         &::after {
-          content: '';
-          position: absolute;
-          bottom: -10px; 
-          left: 10px;
-          right: 10px;
-          height: 10px;
-          background: v.$text-color;
-          border-bottom-left-radius: v.$radius-md;
-          border-bottom-right-radius: v.$radius-md;
-          z-index: -1;
+            content: '';
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            height: 10px;
+            background: v.$text-color;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: -1;
         }
-      
+
+        &::before {
+            bottom: -10px;
+        }
+
         &::after {
-          bottom: -16px;
-          left: 14px;
-          right: 14px;
-          height: 10px;
-          background: #CACADB;
-          border-bottom-left-radius: v.$radius-md;
-          border-bottom-right-radius: v.$radius-md;
+            bottom: -20px;
+            left: 15px;
+            right: 15px;
+            background-color: v.$shadow-color; // Darker shadow tone
         }
       }
       
