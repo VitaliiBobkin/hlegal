@@ -17,8 +17,8 @@
             right: 10px;
             height: 10px;
             background: v.$text-color;
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: v.$radius-md;
+            border-bottom-right-radius: v.$radius-md;
             z-index: -1;
         }
 
@@ -28,11 +28,11 @@
 
         &::after {
             bottom: -20px;
-            left: 15px;
-            right: 15px;
-            background-color: v.$shadow-color; // Darker shadow tone
+            left: 40px;
+            right: 40px;
+            background-color: v.$shadow-color; 
         }
-      }
+    }
       
     &__list{
        padding-bottom: 30px; 
